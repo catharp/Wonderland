@@ -1,0 +1,17 @@
+branch-defaults:
+  master:
+    environment: wonderland
+    group_suffix: null
+global:
+  application_name: wonderland
+  branch: null
+  default_ec2_keyname: aws-eb
+  default_platform: Node.js
+  default_region: us-west-1
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  repository: null
+  sc: git
+  workspace_type: Application
