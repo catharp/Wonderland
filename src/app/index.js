@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SignUpForm from './signup';
 import logo from './logo.svg';
 import './styles.css';
 
@@ -13,6 +14,7 @@ class App extends Component {
         <p className="App-intro">
            So do we, and we're planning something big!  Sign up, and we'll keep you posted...
         </p>
+        <SignUpForm />
       </div>
     );
   }
