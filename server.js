@@ -31,7 +31,7 @@ else {
 
   app.get('/', (req, res) => {
     console.log('getting...');
-    res.sendFile(`${__dirname}/dist/index.html`);
+    res.sendFile(`${__dirname}/build/index.html`);
   });
 
   app.post('/signup', (req, res) => {
