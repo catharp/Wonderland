@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 
-const signUp = (info) => {
+const postToSignUp = (info) => {
   console.log('posting:', info);
   fetch('/signup', { method: 'POST', info })
   .then(res => console.log(res));
@@ -11,7 +11,7 @@ class SignUpForm extends Component {
   render() {
     const { handleSubmit } = this.props;
     return (
-      <form onSubmit={handleSubmit(signUp)}>
+      <form onSubmit={handleSubmit(postToSignUp)}>
         <Field name='email' component='input' type='text' />
         <button type='submit'>Sign Me Up!</button>
       </form>
