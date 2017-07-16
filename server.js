@@ -24,13 +24,13 @@ else {
   const snsTopic = process.env.NEW_SIGNUP_TOPIC;
   const app = express();
 
-  app.use(bodyParser.urlencoded({extended:false}));
+  app.use(bodyParser.urlencoded({ extended: false }));
+  app.use(bodyParser.json());
 
   app.use(express.static('./'));
   app.use(express.static('build'));
 
   app.get('/', (req, res) => {
-    console.log('getting...');
     res.sendFile(`${__dirname}/build/index.html`);
   });
 
@@ -42,7 +42,7 @@ else {
     ddb.putItem({
       'TableName': ddbTable,
       'Item': item,
-      'Expected': { email: { Exists: false } }
+      'Expected': { email: { Exists: false } },
     }, (err, data) => {
       if (err) {
         console.error('DDB Error:', err);
