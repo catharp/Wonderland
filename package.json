@@ -9,6 +9,11 @@
   },
   "devDependencies": {
     "eslint": "^4.2.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "^7.1.0",
     "react-scripts": "0.9.5"
   },
   "dependencies": {
@@ -24,10 +29,12 @@
     "redux-form": "^6.6.3"
   },
   "scripts": {
-    "start": "node server.js",
-    "dev": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "dev": "react-scripts start",
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "start": "node server.js",
+    "test": "react-scripts test --env=jsdom"
   }
 }
